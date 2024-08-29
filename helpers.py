@@ -56,7 +56,7 @@ class CustomAPILLM(LLM):
 loader = TextLoader("data.txt")
 docs = loader.load()
 
-text_splitter = CharacterTextSplitter(chunk_size=2000, chunk_overlap=200)
+text_splitter = CharacterTextSplitter(chunk_size=3000, chunk_overlap=500)
 documents = text_splitter.split_documents(docs)
 
 embeddings = GoogleGenerativeAIEmbeddings(
