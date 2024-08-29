@@ -4,15 +4,6 @@ from helpers import generate
 
 st.set_page_config(page_title="CodeMap.AI", page_icon=":material/code:", layout="centered")
 
-st.markdown(
-    """
-    <head>
-        <meta name="description" content="Your own personal AI assistant, Cody, that helps you get started with coding and advance in various technical niches! With a knowledge base of over 100,000 documents curated by professionals out of expert articles and roadmaps, CodeMap.AI is here to help you with your coding journey.">
-    </head>
-    """,
-    unsafe_allow_html=True
-)
-
 st.title("CodeMap.AI")
 
 with st.sidebar:
