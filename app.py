@@ -7,8 +7,8 @@ st.set_page_config(page_title="CodeMap.AI", page_icon=":material/code:", layout=
 st.title("CodeMap.AI")
 
 with st.sidebar:
-    st.title("About CodeMap.AI")
-    st.write("Your own personal AI assistant, Cody, that helps you get started with coding and advance in various technical niches! With a knowledge base of over 100,000 documents curated by professionals out of expert articles and roadmaps, CodeMap.AI is here to help you with your coding journey.")
+    st.title("About Cody")
+    st.write("Your own personal AI assistant, Cody, that helps you get started with coding and advance in various technical niches! With a knowledge base of over 1,000 documents curated by professionals out of expert articles and roadmaps, CodeMap.AI is here to help you with your coding journey.")
 
     if st.button("Clear Chat"):
         st.session_state.messages = []
@@ -55,3 +55,5 @@ if prompt := st.chat_input("Ask Cody Anything!"):
             response = asyncio.run(generate(prompt, formatted_history))
         st.write(response)
     st.session_state.messages.append({"role": "assistant", "content": response})
+else:
+    st.write("Ask Cody anything about coding, including roadmaps and guidance! 🤖")
