@@ -1,5 +1,5 @@
 
-**![](https://github.com/user-attachments/assets/6c3775ba-5f7e-4d07-959b-5c578b6e0b7a)**
+**![](https://github.com/user-attachments/assets/8791da5f-975c-466c-b0b9-6a1559c680b9)**
 <p align="center">
     <a href="https://tidb-lawassist.streamlit.app"> Streamlit App</a>
   </p>
