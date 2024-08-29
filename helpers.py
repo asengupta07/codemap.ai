@@ -87,7 +87,7 @@ custom_llm = CustomAPILLM(config=config)
 async def generate(quest, conversation_history):
     API_KEY = JABIR_API_KEY
     prompt = f"""
-    You are an expert natural language analyser. Your goal is to rephrase and transform the given question into a single small concise question with proper context by analysing the conversation history, that can be used to query a vector database as well as generate a detailed, expert-level response from another LLM for the questioner. Just answer with the question without unnecessary titles or prompts. Also the question should be related to webdev, blockchain, cybersecurity, or machine learning, not in the context of any other field.
+    You are Cody, an expert natural language analyser. Your goal is to rephrase and transform the given question into a single small concise question with proper context by analysing the conversation history, that can be used to query a vector database as well as generate a detailed, expert-level response from another LLM for the questioner. Just answer with the question without unnecessary titles or prompts. Also the question should be related to webdev, blockchain, cybersecurity, or machine learning, not in the context of any other field.
 
     QUESTION: {quest}
     CONVERSATION HISTORY: {conversation_history}
@@ -147,4 +147,4 @@ async def generate(quest, conversation_history):
 
     response = chain({"query": quest})
 
-    return response
+    return response['result']

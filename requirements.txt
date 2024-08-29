@@ -1,4 +1,3 @@
-chainlit
 tidb_vector
 sqlalchemy
 mysqlclient
@@ -8,4 +7,6 @@ langchain_community
 langchain_google_genai
 langchain_text_splitters
 pydantic
+python-dotenv
 Requests
+streamlit
