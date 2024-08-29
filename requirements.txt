@@ -1,4 +1,8 @@
 chainlit
+tidb_vector
+sqlalchemy
+mysqlclient
+pymysql
 langchain
 langchain_community
 langchain_google_genai
