@@ -8,6 +8,13 @@ from langchain.llms.base import LLM
 from pydantic import BaseModel
 from typing import Any, List, Optional
 import requests
+import dotenv
+import os
+
+dotenv.load_dotenv()
+
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+JABIR_API_KEY = os.getenv("JABIR_API_KEY")
 
 
 class CustomConfig(BaseModel):
@@ -54,7 +61,7 @@ documents = text_splitter.split_documents(docs)
 
 embeddings = GoogleGenerativeAIEmbeddings(
     model="models/embedding-001",
-    google_api_key="AIzaSyD4BaMhXTDgcNJQ5aA3d6Wz6FFqCgleGuQ",
+    google_api_key=GOOGLE_API_KEY,
 )
 
 capath = "/etc/ssl/certs/ca-certificates.crt"
@@ -72,15 +79,15 @@ retriever = vector_store.as_retriever(score_threshold=0.5)
 
 config = CustomConfig(
     api_url="https://api.jabirproject.org/generate",
-    api_key="adc4ae97-fa05-4faf-b1b4-a72805d035c4",
+    api_key=JABIR_API_KEY,
 )
 custom_llm = CustomAPILLM(config=config)
 
 
 async def generate(quest, conversation_history):
-    API_KEY = "adc4ae97-fa05-4faf-b1b4-a72805d035c4"
+    API_KEY = JABIR_API_KEY
     prompt = f"""
-    You are an expert natural language analyser. Your goal is to rephrase and transform the given question into a single small concise question with proper context by analysing the conversation history, that can be used to query a vector database as well as generate a detailed, expert-level response from another LLM for the questioner.
+    You are an expert natural language analyser. Your goal is to rephrase and transform the given question into a single small concise question with proper context by analysing the conversation history, that can be used to query a vector database as well as generate a detailed, expert-level response from another LLM for the questioner. Just answer with the question without unnecessary titles or prompts. Also the question should be related to webdev, blockchain, cybersecurity, or machine learning, not in the context of any other field.
 
     QUESTION: {quest}
     CONVERSATION HISTORY: {conversation_history}
@@ -98,6 +105,8 @@ async def generate(quest, conversation_history):
         quest = response.json().get("result", {}).get("content", "")
     else:
         print(f"Error: {response.status_code} - {response.text}")
+
+    print(quest)
 
     prompt_template = f"""
     You are an experienced coding mentor specializing in various technical niches like web development, machine learning, blockchain, cybersecurity, and more. Your goal is to provide clear, practical, and expert advice on how to start learning coding and advance in these fields.
