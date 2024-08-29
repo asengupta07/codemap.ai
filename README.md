@@ -24,7 +24,7 @@
 
 <div style="display: flex; align-items: center;">
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/ac7d19f5-32cc-431e-ad36-84ca9b9a608b" alt="Conversation Management" style="width: 50%; max-width: 300px;">
+    <img src="https://github.com/user-attachments/assets/ac7d19f5-32cc-431e-ad36-84ca9b9a608b" alt="Conversation Management" style="width: 80%; max-width: 300px;">
     <br>RAG Architecture Workflow
   </p>
 
