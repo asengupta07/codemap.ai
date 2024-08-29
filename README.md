@@ -1,7 +1,7 @@
 
-**![](https://github.com/user-attachments/assets/6c3775ba-5f7e-4d07-959b-5c578b6e0b7a)**
+**![](https://github.com/user-attachments/assets/8791da5f-975c-466c-b0b9-6a1559c680b9)**
 <p align="center">
-    <a href="https://tidb-lawassist.streamlit.app"> Streamlit App</a>
+    <a href="https://codemap-ai.onrender.com"> Streamlit App</a>
   </p>
 <h1 align="center">CodeMap.AI</h1>
 
@@ -21,7 +21,16 @@
 
 4. **Contextual Assistance**: Unlike static resources, Cody utilizes conversation history to provide contextually relevant advice. This means that the guidance Cody offers becomes more accurate and aligned with the student’s specific learning journey as interactions continue.
 
-5. **Accessibility and Convenience**: Cody is available through the CodeMap.AI streamlit app, offering a free, accessible and convenient way for students to get guidance on their coding journey whenever they need it. This flexibility is particularly beneficial for students who may not have access to funds for professional guidance.
+
+<div style="display: flex; align-items: center;">
+  <p align="center">
+    <img src="https://github.com/user-attachments/assets/ac7d19f5-32cc-431e-ad36-84ca9b9a608b" alt="Conversation Management" style="width: 50%; max-width: 300px;">
+    <br>RAG Architecture Workflow
+  </p>
+
+</div>
+
+6. **Accessibility and Convenience**: Cody is available through the CodeMap.AI streamlit app, offering a free, accessible and convenient way for students to get guidance on their coding journey whenever they need it. This flexibility is particularly beneficial for students who may not have access to funds for professional guidance.
 
 ## Key Features
 
