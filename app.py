@@ -1,6 +1,5 @@
 import chainlit as cl
 from helpers import generate
-import json
 
 @cl.on_message
 async def main(message: cl.Message):    
